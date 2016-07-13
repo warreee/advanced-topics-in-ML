@@ -66,7 +66,7 @@
 %+++ Sprache ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % neue Deutsche Rechtschreibung: Trennregeln!
-\usepackage[english,german,ngerman]{babel}
+\usepackage[english]{babel}
 
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -127,17 +127,35 @@
 % Informationen zum Dokument
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\author{\textcolor{gray}{Author:} Ward Schodts\\ \textcolor{gray}{Supervisor:}
-Juan Soto}
-\title{Pagerank in Apache Flink}
+\author{\textcolor{gray}{Author:} Ward Schodts\\ \textcolor{gray}{Dozent:}
+Pieter-Jan Kindermans}
+\title{Concept drift}
 %s\subtitle{lll}
-\institute{Datenbanksysteme und Informationsmanagement \\
+\institute{Hot Topics in Machine Learning	 \\
 Technische Universität Berlin \\[0.5cm]
 \includegraphics[width=1.8cm]{tulogo}}
 %\university{ss}
 \date{\today}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Voor frames
+\usepackage{mdframed}
+% Voor kleuren
+\usepackage{xcolor}
+
+\definecolor{solarback}{HTML}{d9d9d9}
+\definecolor{solarfront}{HTML}{000000}
+\mdfdefinestyle{de}{linewidth=0pt,backgroundcolor=solarback,fontcolor=solarfront}
+\newenvironment{de}[1]
+{\begin{mdframed}[style=de]\begin{mydef}{\textbf{#1:}}\\} 
+{\end{mydef}\end{mdframed}}
+\newtheorem{mydef}{}
+
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % Dokument 
@@ -163,7 +181,10 @@ Technische Universität Berlin \\[0.5cm]
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{chapters/intro.tex}
-\input{chapters/topic1.tex}
+\input{chapters/ala.tex}
+\input{chapters/mfcda.tex}
+\input{chapters/evaluation.tex}
+\input{chapters/conclusion.tex}
 
 
 %--------------------------------------------------------
