@@ -1,5 +1,11 @@
 \section{Adaptive Learning Algorithms}
 
+\begin{frame}
+\frametitle{Agenda}
+\tableofcontents[currentsection]
+\end{frame}
+
+
 % --------------------------------------------------------------------------------------------------------------
 \begin{frame}
 \frametitle{Adaptive Learning Algorithms}
@@ -33,7 +39,7 @@ memory for any storage.
 
 \begin{enumerate}
 	\item \textit{Predict.} When new example $X_t$ arrives, a prediction $\hat{y_t}$ is made using the curren model $L_t$.
-	\item<2-3> \textit{Diagnose.} After some time, the true label $y_t$ and can estimate the loss as $f(\hat{y_t}, y_t)$.
+	\item<2-3> \textit{Diagnose.} After some time, the true label $y_t$ is received and we can estimate the loss as $f(\hat{y_t}, y_t)$.
 	\item<3> \textit{Update.} We can use the example $(X_t,y_t)$ for the model update to obtain $L_{t+1}$.
 \end{enumerate}
 
